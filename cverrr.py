@@ -19,16 +19,4 @@ def cve():
   return()
 
 cve()
-#contents = str(content)
-
-#f = open('cve.html', 'w')
-#f.seek(0)
-#f.write(contents)
-#f.close()
-
-
-#print '<html>'
-#for url in doc['rdf:RDF']['channel']['items']['rdf:Seq']['rdf:li']:
-#  print '<a href=' + url['@rdf:resource'] + '>' + url['@rdf:resource'] + '</a><p>'
-#print '</html>'
 
