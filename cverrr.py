@@ -9,12 +9,12 @@ feed.close()
 doc = xmltodict.parse(data)
 
 def cve():
-  file = open('cve.html','w')
-  file.write('<html>')
+  file = open('/var/www/cve/cve.html','w')
+#  file.write('<div class="cve">')
   for item in doc['rdf:RDF']['item']:
-    file.write('<a href=' + item['link'] + '>' + '<b>' + item['title'] + '</b>'  + '</a>\n')
-    file.write(item['description'] + '<p>')
-  file.write('</html>')
+    file.write('<div class="cve"><a href=' + item['link'] + '>' + '<h3>' + item['title'] + '</h3>'  + '</a>\n')
+    file.write('<div class="desc">' + item['description'] + '<p></div></div>')
+#  file.write('</div>')
   file.close()
   return()
 
